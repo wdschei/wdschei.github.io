@@ -1,0 +1,25 @@
+/* CSS for full-width layout and customizations */
+
+/* Adjust main content to use full width */
+.md-content {
+  margin-left: 0;
+}
+
+/* Expand the content area to full width */
+.md-grid {
+  max-width: 100%;
+}
+
+/* Optional: Add some padding for better readability on very wide screens */
+@media (min-width: 1920px) {
+  .md-content {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Ensure proper spacing for top-level sections */
+.md-typeset {
+  padding: 1.5rem;
+}

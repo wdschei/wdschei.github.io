@@ -1,0 +1,96 @@
+site_name: Bill Scheidegger's Homepage
+site_description: Personal notes website for Bill Scheidegger
+site_dir: ./build/public
+site_author: Bill Scheidegger
+site_url: https://wdschei.thescheideggers.com/
+dev_addr: localhost:8080
+use_directory_urls: false
+validation:
+  nav:
+    omitted_files: ignore
+hooks:
+  - docs/assets/scripts/mkdocs_hooks.py
+theme:
+  name: material
+  palette:
+    # System Default
+    - media: "(prefers-color-scheme: auto)"
+      primary: deep purple
+      accent: light blue
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Light Mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark Mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system default
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.share
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - toc.follow
+  logo: assets/images/avatar.jpeg
+plugins:
+  - search:
+      lang: en
+  - toggle-sidebar:
+      toggle_button: all # Add a toggle button to the sidebar, allowing users to show/hide it
+  - gen-files:
+      scripts:
+        - docs/assets/scripts/gen_pages.py
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      linenums: true  # Enables line numbers globally
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.snippets:
+      check_paths: true
+      base_path: docs  # This is relative to the project root where the `mkdocs serve` or `mkdocs build` would be executed from.
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - tables
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/fonts.css
+  - assets/stylesheets/fullwidth.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@11.14.0/dist/mermaid.min.js
+  - assets/javascripts/mermaid-init.js
+
+nav:
+  - Home: index.md
+  - Examples:
+      - Mermaid: Examples/Mermaid.md
+      - ExcaliDraw: Examples/ExcaliDraw.md
+      - Image Gallery: assets/images/ExcaliDraw/index.md
+  - About: about.md

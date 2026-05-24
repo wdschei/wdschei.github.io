@@ -1,0 +1,18 @@
+/* Remove padding to allow the icon to take up more space */
+.md-header__button.md-logo {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the desired height and width */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    height: 30.0px; /* Adjust this value as needed */
+    width: 30.0px;
+}
+
+@media screen and (max-width: 76.1875em) {
+    .md-tabs {
+        display: none;
+    }
+}
