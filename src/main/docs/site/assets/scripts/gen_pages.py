@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Any
 
 IMAGE_EXT = {".png", ".jpg", ".jpeg", ".gif", ".bmp", ".svg"}
-IMAGES_DIR = Path("docs/assets/images/ExcaliDraw") # relative to the project root, since the mkdocs_gen_files executes from where the mkdocs/properdocs command is executes.
+IMAGES_DIR = Path("src/main/docs/site/assets/images/ExcaliDraw") # relative to the project root, since the mkdocs_gen_files executes from where the mkdocs/properdocs command is executes.
 IMAGES_FILE = "assets/images/ExcaliDraw/index.md"  # relative to the docs root and mkdocs_gen_files will place it in the correct location.
 
 log = logging.getLogger(f"mkdocs.plugins.{__name__}")

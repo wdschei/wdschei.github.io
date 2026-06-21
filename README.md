@@ -17,13 +17,13 @@ It is recommended to use a virtual environment:
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r src/main/docs/requirements.txt
 ```
 
 ### 3. Run the development server
 Start the live-reloading server:
 ```bash
-properdocs serve --strict --livereload -f mkdocs.yml
+properdocs serve --strict --livereload -f src/main/docs/mkdocs.yml
 ```
 The site will be available at `http://localhost:8000`.
 

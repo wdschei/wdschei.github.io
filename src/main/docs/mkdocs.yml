@@ -1,15 +1,16 @@
 site_name: Bill Scheidegger's Homepage
 site_description: Personal notes website for Bill Scheidegger
-site_dir: ./build/public
+site_dir: ../../../build/public
 site_author: Bill Scheidegger
 site_url: https://wdschei.thescheideggers.com/
+docs_dir: ./site
 dev_addr: localhost:8080
 use_directory_urls: false
 validation:
   nav:
     omitted_files: ignore
 hooks:
-  - docs/assets/scripts/mkdocs_hooks.py
+  - site/assets/scripts/mkdocs_hooks.py
 theme:
   name: material
   palette:
@@ -56,7 +57,7 @@ plugins:
       toggle_button: all # Add a toggle button to the sidebar, allowing users to show/hide it
   - gen-files:
       scripts:
-        - docs/assets/scripts/gen_pages.py
+        - site/assets/scripts/gen_pages.py
 markdown_extensions:
   - admonition
   - attr_list
@@ -67,7 +68,7 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.snippets:
       check_paths: true
-      base_path: docs  # This is relative to the project root where the `mkdocs serve` or `mkdocs build` would be executed from.
+      base_path: src/main/docs/site  # This is relative to the project root where the `mkdocs serve` or `mkdocs build` would be executed from.
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

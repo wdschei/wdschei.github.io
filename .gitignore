@@ -386,5 +386,4 @@ _site/
 .sass-cache/
 
 # MkDocs
-site/
 .mkdocs/
