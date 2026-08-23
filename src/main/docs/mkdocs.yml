@@ -75,6 +75,7 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.inlinehilite
+  - pymdownx.tilde
   - tables
   - toc:
       permalink: true
@@ -94,4 +95,5 @@ nav:
       - Mermaid: Examples/Mermaid.md
       - ExcaliDraw: Examples/ExcaliDraw.md
       - Image Gallery: assets/images/ExcaliDraw/index.md
+  - New House: New_House/NewHouse.md
   - About: about.md
